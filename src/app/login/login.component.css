@@ -1,18 +1,29 @@
+.outer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  height: 500px;
+  width: 350px;
   text-align: center;
 }
 
 h2 {
+margin-top: 80px;
   margin-bottom: 20px;
   color: #333;
 }
 
 .form-group {
+
   margin-bottom: 15px;
   text-align: left;
 }
@@ -51,4 +62,22 @@ input:focus {
 
 .login-button:hover {
   background-color: #0056b3;
+}
+
+.register-btn {
+  background-color: #0078ff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #005bb5;
+  transform: scale(1.1);
 }

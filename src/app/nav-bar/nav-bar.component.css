@@ -6,14 +6,11 @@ body {
 }
 
 .navbar {
-  background: #0e1720;
+  background-image: url('https://wallpapers.com/images/hd/plain-dark-green-wallpaper-4py2q8q4fvne42p7.jpg');
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.logo{
-   width: 6rem;
-   height: 6rem;
-}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -23,41 +20,13 @@ body {
   padding: 0 20px;
 }
 
-.navbar-logo {
-  color: #06402B;
-  font-weight: bold;
-  text-decoration: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
 .navbar-menu {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
-  background-color: #0e1720;
-
-}
-.play-button{
- width: 9rem;
- margin-left: 30px;
- font-size: 20px;
- color: #ceb072;
- background-color: #0e1720;
- font-weight: bold;
- border-radius: 7px;
- margin-bottom: 10px;
- transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.play-button:hover{
-background-color: #be995a;
-color: #0e1720;
-cursor: pointer;
-transform: scale(1.1);
-background: linear-gradient(45deg, #00778e, #21cfda , #4ffbff);
+  justify-content: center; /* Center the menu items */
+  width: 100%; /* Ensure the items take up the full width */
 }
 
 .navbar-item {
@@ -78,7 +47,6 @@ background: linear-gradient(45deg, #00778e, #21cfda , #4ffbff);
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #b2914a;
   bottom: -5px;
   left: 0;
   transition: width 0.3s ease;
@@ -108,7 +76,6 @@ background: linear-gradient(45deg, #00778e, #21cfda , #4ffbff);
     background-color: white;
     width: 100%;
     padding: 20px;
-
   }
 
   .navbar-item {
@@ -130,4 +97,3 @@ background: linear-gradient(45deg, #00778e, #21cfda , #4ffbff);
     font-size: 1.5rem;
   }
 }
-

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  onButtonClick() {
-    alert('Vi ste kliknuli na gumb!');
-    const homeContainer = document.querySelector('.home-container') as HTMLElement;
-    if (homeContainer) {
-      homeContainer.style.backgroundColor = '#f2f2f2';
 
-    }
-  }
 }
 

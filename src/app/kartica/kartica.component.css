@@ -1,10 +1,21 @@
+.outer-grid {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://wallpapers.com/images/hd/plain-dark-green-wallpaper-4py2q8q4fvne42p7.jpg');
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dva stupca */
-  grid-template-rows: repeat(2, auto);  /* Dva reda */
-  gap: 20px; /* Razmak između sekcija */
-  width: 80%; /* Širina grid-a */
-  max-width: 800px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 20px;
 }
 
 .grid-item {
@@ -15,4 +26,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }

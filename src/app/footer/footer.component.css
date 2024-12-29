@@ -11,8 +11,8 @@ body {
 }
 
 .footer {
-  background-color: #d9b974;
-  color: #0e1720;
+  background-color: #0e1720;
+  color: white;
   text-align: center;
   padding: 30px 0;
   width: 100%;
@@ -36,7 +36,7 @@ body {
 }
 
 .social-links a {
-  color: #0e1720;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }

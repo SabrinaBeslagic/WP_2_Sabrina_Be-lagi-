@@ -1,0 +1,54 @@
+
+.appheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+background-color: #0e1720;
+}
+
+.logo {
+  width: 12rem;
+  height: 6rem;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navigation a:hover {
+  color: #ff6347;
+}
+
+.play-button {
+  width: 9rem;
+  height:3rem;
+  margin-left: 30px;
+  font-size: 20px;
+  color: #ceb072;
+  background-color: #0e1720;
+  font-weight: bold;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #be995a;
+  color: #0e1720;
+  cursor: pointer;
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #00778e, #21cfda, #4ffbff);
+}
