@@ -8,8 +8,7 @@
 
 .news-card {
    display: inline-block;
-   contant: center;
-   justify-contant: center;
+   justify-content: center;
    width:400px;
    height: 325px;
    margin-right: 20px;

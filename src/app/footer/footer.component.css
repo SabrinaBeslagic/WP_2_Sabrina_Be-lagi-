@@ -11,8 +11,8 @@ body {
 }
 
 .footer {
-  background-color: white;
-  color: #06402B;
+  background-color: #d9b974;
+  color: #0e1720;
   text-align: center;
   padding: 30px 0;
   width: 100%;
@@ -26,15 +26,8 @@ body {
   text-decoration: none;
 }
 
-.footer-text a {
-  color: pink;
-  text-decoration: underline;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
 .footer-text a:hover,
 .footer-text a:focus {
-  color: pink;
   transform: scale(1.1);
   text-decoration: underline;
 }
@@ -43,13 +36,14 @@ body {
 }
 
 .social-links a {
-  color: #ffd700;
+  color: #0e1720;
   text-decoration: none;
   font-weight: bold;
 }
 
 .social-links a:hover {
   text-decoration: underline;
+
 }
 
 
