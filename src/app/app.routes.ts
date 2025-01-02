@@ -7,12 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
- { path: '', component: HomeComponent }, // Default ruta
- { path: 'about', component: AboutComponent }, // /about prikazuje AboutComponent
+{ path: '', redirectTo: '/login', pathMatch: 'full' },
+{ path: 'login', component: LoginComponent},
+ { path: 'home', component: HomeComponent },
+ { path: 'about', component: AboutComponent },
  { path:'kartica',component: KarticaComponent},
- { path: 'login', component: LoginComponent},
  { path: 'register', component: RegisterComponent},
- { path: '**', redirectTo: '', pathMatch: 'full' }// Fallback ruta
+
 
 ];
 @NgModule({
