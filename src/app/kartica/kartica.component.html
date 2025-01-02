@@ -1,27 +1,7 @@
-<div class="outer-grid">
-<div class="grid-container">
-  <div class="grid-item">Sekcija 1</div>
-  <div class="grid-item">Sekcija 2</div>
-  <div class="grid-item">Sekcija 3</div>
-  <div class="grid-item">Sekcija 4</div>
-  <div class="grid-item">Sekcija 5</div>
-
-  <div class="grid-item">Sekcija 6</div>
-  <div class="grid-item">Sekcija 7</div>
-  <div class="grid-item">Sekcija 8</div>
-  <div class="grid-item">Sekcija 9</div>
-  <div class="grid-item">Sekcija 10</div>
-
-  <div class="grid-item">Sekcija 11</div>
-  <div class="grid-item">Sekcija 12</div>
-  <div class="grid-item">Sekcija 13</div>
-  <div class="grid-item">Sekcija 14</div>
-  <div class="grid-item">Sekcija 15</div>
-
-  <div class="grid-item">Sekcija 16</div>
-  <div class="grid-item">Sekcija 17</div>
-  <div class="grid-item">Sekcija 18</div>
-  <div class="grid-item">Sekcija 19</div>
-  <div class="grid-item">Sekcija 20</div>
-</div>
+<div class="product-card-container" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; padding: 1rem; background-color: #121212; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+  <div *ngFor="let product of products" class="product-card" style="background-color: #1b1b1b; color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s; width: 300px;">
+    <img [src]="product.img_url" alt="{{ product.name }}" style="width: 100%; height: 200px; object-fit: cover; border-bottom: 2px solid #333;">
+    <h3 style="font-size: 1.2rem; font-weight: bold; margin: 0.5rem 1rem;">{{ product.name }}</h3>
+    <p style="font-size: 1rem; color: #cccccc; margin: 0 1rem 1rem;">{{ product.description }}</p>
+  </div>
 </div>
