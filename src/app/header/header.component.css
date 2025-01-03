@@ -4,12 +4,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-background-color: #0e1720;
+background-color: black;
+}
+.name{
+font-family: 'Jersey 15', sans-serif;
+font-size: 50px;
+color:white;
 }
 
 .logo {
   width: 12rem;
-  height: 6rem;
+  height: 8rem;
+
 }
 .navigation ul {
   list-style-type: none;

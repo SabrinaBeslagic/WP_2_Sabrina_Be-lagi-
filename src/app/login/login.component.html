@@ -1,5 +1,6 @@
 <div class="outer-container">
   <div class="login-container">
+
     <h2>Login</h2>
     <form (ngSubmit)="login()" #loginForm="ngForm">
       <div class="form-group">
@@ -40,13 +41,10 @@
         <li *ngFor="let error of errors">{{ error }}</li>
       </ul>
     </div>
+    <div class="form-footer">
+      <a href="/register ">You aren't registered?</a>
+      <br>
+    </div>
+  </div>
 
-    <h3>No account?</h3>
-    <button routerLink="/register" class="register-btn">Register now!</button>
-  </div>
-  <div class="form-footer">
-    <a href="/register ">You aren't registered?</a>
-    <br>
-    <a href="/change-password ">Forgot your password?</a>
-  </div>
 </div>

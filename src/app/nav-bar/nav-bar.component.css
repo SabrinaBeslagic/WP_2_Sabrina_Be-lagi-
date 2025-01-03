@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: 'Georgia', Serif;
-  background-color: #06402B;
-  color: #333;
+  background-color: #a13e42;
+  color: #b0bfc6;
 }
 
 .navbar {
-  background-image: url('https://wallpapers.com/images/hd/plain-dark-green-wallpaper-4py2q8q4fvne42p7.jpg');
+  background-color:#b0bfc6;
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -31,11 +31,12 @@ body {
 
 .navbar-item {
   margin-left: 30px;
-  font-size: 1.6rem;
-  color: #c5a461;
+  font-size: 2rem;
+  color: black;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease, padding-left 0.3s ease;
+  font-family: 'Jersey 15', sans-serif;
 }
 
 .navbar-item:hover {

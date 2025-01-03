@@ -1,38 +1,55 @@
-.outer-container{
+.outer-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149014827.jpg?semt=ais_hybrid');
+    background-size: cover; /* Makes sure the image covers the entire container */
+    background-position: center; /* Centers the image within the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures the container covers the full height of the viewport */
+    width: 100%;
 }
 
 .login-container {
   margin-top: 20px;
   margin-bottom: 20px;
-  background: white;
+  background: #b0bfc6;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  height: 500px;
-  width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2); /* Added shadow beneath */
+  height: 700px;
+  width: 400px;
   text-align: center;
 }
 
+.form-footer{
+margin-top: 30px;
+WolfByte Games
+font-size: 25px;
+}
+
 h2 {
-margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 20px;
-  color: #333;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Jersey 15', sans-serif;
 }
 
 .form-group {
-
   margin-bottom: 15px;
   text-align: left;
+  color: #b0bfc6;
 }
 
 label {
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   display: block;
-  color: #555;
+  color: black;
+  font-family: 'Jersey 15', sans-serif;
 }
 
 input {
@@ -50,20 +67,37 @@ input:focus {
 }
 
 .login-button {
+  margin-top: 20px;
   width: 100%;
-  padding: 10px;
+  padding: 12px 20px; /* Slightly increased padding for a better look */
   background-color: #007bff;
   border: none;
   color: white;
-  font-size: 16px;
-  border-radius: 4px;
+  font-size: 25px;
+  font-weight: bold; /* Bold text for emphasis */
+  font-family: 'Jersey 15', sans-serif;
+  border-radius: 8px; /* Rounded corners for a softer look */
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s; /* Smooth transition effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
 }
 
 .login-button:hover {
   background-color: #0056b3;
+  transform: translateY(-3px); /* Lift the button slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow when hovered */
 }
 
+.login-button:active {
+  background-color: #004085;
+  transform: translateY(1px); /* Slightly push the button down to give a pressed effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow when active */
+}
+.login-button:disabled {
+  background-color: #cccccc; /* Light gray background when disabled */
+  cursor: not-allowed; /* Disable pointer events */
+  box-shadow: none; /* Remove shadow when disabled */
+}
 .register-btn {
   background-color: #0078ff;
   color: white;
@@ -80,4 +114,25 @@ input:focus {
 .register-btn:hover {
   background-color: #005bb5;
   transform: scale(1.1);
+}
+
+/* Error Message Styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.error-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: red;
+  font-size: 14px;
+}
+
+.error-container li {
+  padding: 5px 0;
 }

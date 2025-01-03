@@ -1,33 +1,71 @@
-.outer-grid {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+.product-card-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url('https://wallpapers.com/images/hd/plain-dark-green-wallpaper-4py2q8q4fvne42p7.jpg');
+  padding: 1rem;
+  background-color: #121212;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, auto);
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 20px;
-}
-
-.grid-item {
-  background-color: #007BFF;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.product-card {
+  background-color: #1b1b1b;
+  color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(20% - 1.5rem); /* Ensures 5 cards fit in a row */
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 500px; /* Adjusted for better scaling */
+  object-fit: cover;
+  border-bottom: 2px solid #333;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0 1rem 1rem;
+}
+
+.product-card .rating {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100px;
+  margin: 0.5rem 0;
 }
+
+.product-card .rating .star {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0 0.1rem;
+}
+
+.product-card .rating .star.filled {
+  color: #ffd700;
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
