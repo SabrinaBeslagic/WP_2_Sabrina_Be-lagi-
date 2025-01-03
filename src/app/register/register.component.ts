@@ -61,9 +61,9 @@ export class RegisterComponent {
       return;
     }
 
-    // Slanje podataka prema bazi
+
     try {
-      const res = await fetch('http://localhost/my-backend/register.php', { // Prilagođeno tvojoj bazi
+      const res = await fetch('http://localhost/my-backend/register.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
