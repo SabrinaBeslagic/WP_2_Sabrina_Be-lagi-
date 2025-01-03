@@ -1,20 +1,47 @@
 <div class="outer-container">
-<div class="login-container">
-  <h2>Login</h2>
-  <form>
-    <div class="form-group">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username" required />
-    </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required />
-    </div>
-    <button type="submit" class="login-button">Log In</button>
-  </form>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          required
+          [(ngModel)]="username"
+          #usernameInput="ngModel"
+        />
+        <div *ngIf="usernameInput.invalid && usernameInput.touched" class="error">
+          Username is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+          [(ngModel)]="password"
+          #passwordInput="ngModel"
+        />
+        <div *ngIf="passwordInput.invalid && passwordInput.touched" class="error">
+          Password is required.
+        </div>
+      </div>
+      <button type="submit" class="login-button" [disabled]="loginForm.invalid">Log In</button>
+    </form>
 
-  <h3>No account?</h3>
-  <button routerLink="/register" class="register-btn">Register now!</button>
+    <div *ngIf="errors.length > 0" class="error-container">
+      <ul>
+        <li *ngFor="let error of errors">{{ error }}</li>
+      </ul>
+    </div>
 
-</div>
+    <h3>No account?</h3>
+    <button routerLink="/register" class="register-btn">Register now!</button>
+  </div>
 </div>

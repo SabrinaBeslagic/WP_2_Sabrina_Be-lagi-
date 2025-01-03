@@ -1,11 +1,79 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [
+    FormsModule,
+    NgIf,
+    NgForOf
+  ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  protected username: string = '';
+  protected password: string = '';
+  protected user: any = null;
+  protected errors: string[] = [];
 
+  public constructor(private router: Router) {
+   // const userID = sessionStorage.getItem('userID');
+
+//     if (userID) {
+//       this.router.navigate(['/home']);
+//       alert('You are already logged in!');
+//       return;
+//     }
+  }
+
+  public async login() {
+    this.errors = [];
+
+    if (!this.username || this.username.trim().length === 0) {
+      this.errors.push("Username is required.");
+    }
+
+    if (!this.password || this.password.trim().length === 0) {
+      this.errors.push("Password is required.");
+    }
+
+    if (this.errors.length > 0) {
+      console.error("Validation errors:", this.errors);
+      return;
+    }
+
+    try {
+      const res = await fetch('http://localhost/my-backend/login.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: this.username,
+          password: this.password,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.errors?.length > 0) {
+        this.errors.push(...data.errors);
+        return;
+      }
+
+      this.user = data.user;
+
+//       sessionStorage.setItem('userID', this.user.id);
+//       sessionStorage.setItem('userName', this.user.username);
+//       console.log(sessionStorage);
+      alert("Login successful!");
+      this.router.navigate(['/home']);
+    } catch (e: any) {
+      this.errors.push(e.message);
+      console.error("Login error:", e.message);
+    }
+  }
 }
