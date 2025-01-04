@@ -1,35 +1,31 @@
 .home-container {
   text-align: center;
-  padding: 100px;
+  padding: auto;/* Remove padding to allow the video to fill the container */
   background-color: #0e1720;
-  color:
-  border-radius: 0;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transform: scale(0.98);
+  color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-  height: 30rem;
+  height: 100vh; /* Ensure the container takes up the full viewport height */
   position: relative;
   overflow: hidden;
 }
-main{
-color: #0bcbd4;
-text-align: center;
-font-weight: bold;
-background-color: #0e1720;
-border-radius: 10px;
+
+main {
+  color: #0bcbd4;
+  text-align: center;
+  font-weight: bold;
+  background-color: #0e1720;
+  border-radius: 10px;
 }
 
 .backgroundvideo {
-margin-top: 20px;
-margin-bottom: 20px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the video */
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
 }
 
 .overlay-button {
@@ -49,10 +45,17 @@ margin-bottom: 20px;
 .overlay-button:hover {
   background-color: rgba(0, 0, 0);
 }
+
+.overlay-button:active {
+  transform: scale(1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .home-image:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
+
 .news-section {
   display: flex;
   justify-content: space-between;
@@ -99,7 +102,6 @@ margin-bottom: 20px;
   }
 }
 
-
 @keyframes fadeInText {
   0% {
     opacity: 0;
@@ -110,16 +112,11 @@ margin-bottom: 20px;
     transform: translateY(0);
   }
 }
-.overlay-button:active {
-  transform: scale(1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
 
 @media (max-width: 768px) {
   .home-container {
-    padding: 30px;
-    width: 100%;
+    padding: 0; /* Remove padding for small screens */
+    height: 100vh;
   }
 
   h1 {
@@ -138,26 +135,9 @@ margin-bottom: 20px;
   }
 }
 
-
 @media (max-width: 420px) {
-  .home-container {
-    padding: 20px;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-
-  p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-
   .overlay-button {
     font-size: 0.9rem;
     padding: 10px 20px;
   }
 }
-

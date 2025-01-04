@@ -2,29 +2,28 @@
   display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149014827.jpg?semt=ais_hybrid');
-    background-size: cover; /* Makes sure the image covers the entire container */
-    background-position: center; /* Centers the image within the container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 100vh; /* Ensures the container covers the full height of the viewport */
+    background-image: url('https://marketplace.canva.com/EAE_NRav_uY/1/0/1600w/canva-red-neon-organized-desktop-gaming-background---desktop-wallpaper-2eq-ewMjw4U.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     width: 100%;
 }
 
 .login-container {
   margin-top: 20px;
   margin-bottom: 20px;
-  background: #b0bfc6;
+  background: #d71932;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2); /* Added shadow beneath */
-  height: 700px;
+  height: 450px;
   width: 400px;
   text-align: center;
 }
 
 .form-footer{
 margin-top: 30px;
-WolfByte Games
 font-size: 25px;
 }
 
@@ -70,11 +69,11 @@ input:focus {
   margin-top: 20px;
   width: 100%;
   padding: 12px 20px; /* Slightly increased padding for a better look */
-  background-color: #007bff;
+  background-color: black;
   border: none;
   color: white;
   font-size: 25px;
-  font-weight: bold; /* Bold text for emphasis */
+  font-weight: bold;
   font-family: 'Jersey 15', sans-serif;
   border-radius: 8px; /* Rounded corners for a softer look */
   cursor: pointer;
@@ -83,13 +82,13 @@ input:focus {
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background-color: black;
   transform: translateY(-3px); /* Lift the button slightly on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow when hovered */
 }
 
 .login-button:active {
-  background-color: #004085;
+  background-color: black;
   transform: translateY(1px); /* Slightly push the button down to give a pressed effect */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow when active */
 }

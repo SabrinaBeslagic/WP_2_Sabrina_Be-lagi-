@@ -11,7 +11,7 @@ body {
 }
 
 .footer {
-  background-color: #0e1720;
+  background-color: black;
   color: white;
   text-align: center;
   padding: 30px 0;
@@ -67,3 +67,4 @@ body {
     padding: 6px 0;
   }
 }
+

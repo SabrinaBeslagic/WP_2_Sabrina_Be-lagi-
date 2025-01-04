@@ -1,22 +1,23 @@
-
 .appheader {
   display: flex;
-  justify-content: space-between;
+  justify-content: inline;
   align-items: center;
   padding: 10px 20px;
-background-color: black;
+  background-color: black;
 }
-.name{
-font-family: 'Jersey 15', sans-serif;
-font-size: 50px;
-color:white;
+
+.name {
+  font-family: 'Jersey 15', sans-serif;
+  font-size: 70px;
+  color: white;
+  margin-left: 5px;
 }
 
 .logo {
   width: 12rem;
-  height: 8rem;
-
+  height: 9rem;
 }
+
 .navigation ul {
   list-style-type: none;
   padding: 0;

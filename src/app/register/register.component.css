@@ -1,76 +1,114 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.outer-register{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .registration-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url('https://marketplace.canva.com/EAE_NRav_uY/1/0/1600w/canva-red-neon-organized-desktop-gaming-background---desktop-wallpaper-2eq-ewMjw4U.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
   width: 100%;
-  max-width: 400px;
 }
 
+.registration-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #d71932;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
 
 .registration-form h2 {
-  text-align: center;
-  color: #333;
+  margin-top: 20px;
   margin-bottom: 20px;
-}
-
-
-.registration-form label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
+  color: black;
+  font-size: 50px;
   font-weight: bold;
+  font-family: 'Jersey 15', sans-serif;
 }
 
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  color: #b0bfc6;
+}
 
-.registration-form input {
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  color: black;
+  font-family: 'Jersey 15', sans-serif;
+}
+
+input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  font-size: 14px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Jersey 15', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+  background-color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"]:active {
+  background-color: black;
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Error Message Styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.error-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: red;
   font-size: 14px;
 }
 
-
-.registration-form input:focus {
-  border-color: #0078ff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
-}
-
-
-.registration-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #0078ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.registration-form button:hover {
-  background-color: #0056cc;
+.error-container li {
+  padding: 5px 0;
 }
