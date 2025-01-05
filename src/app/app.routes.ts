@@ -5,10 +5,12 @@ import { AboutComponent } from './about/about.component';
 import { KarticaComponent } from './kartica/kartica.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AdmindashComponent } from './admindash/admindash.component';
 
 export const routes: Routes = [
 { path: '', redirectTo: '/login', pathMatch: 'full' },
 { path: 'login', component: LoginComponent},
+{ path: 'admindash', component: AdmindashComponent },
  { path: 'home', component: HomeComponent },
  { path: 'about', component: AboutComponent },
  { path:'kartica',component: KarticaComponent},

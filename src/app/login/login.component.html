@@ -1,8 +1,8 @@
 <div class="outer-container">
   <div class="login-container">
-
     <h2>Login</h2>
-    <form (ngSubmit)="login()" #loginForm="ngForm">
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <!-- Username Field -->
       <div class="form-group">
         <label for="username">Username:</label>
         <input
@@ -33,18 +33,23 @@
           Password is required.
         </div>
       </div>
-      <button type="submit" class="login-button" [disabled]="loginForm.invalid">Log In</button>
+      <button
+        type="submit"
+        class="login-button"
+        [disabled]="loginForm.invalid"
+      >
+        Log In
+      </button>
+      <div class="form-footer">
+        <a href="/register ">You aren't registered?</a>
+        <br>
+      </div>
     </form>
+    <div *ngIf="errorMessage" class="error-container">
+      <p>{{ errorMessage }}</p>
+    </div>
+    </div>
 
-    <div *ngIf="errors.length > 0" class="error-container">
-      <ul>
-        <li *ngFor="let error of errors">{{ error }}</li>
-      </ul>
-    </div>
-    <div class="form-footer">
-      <a href="/register ">You aren't registered?</a>
-      <br>
-    </div>
   </div>
 
-</div>
+
