@@ -61,7 +61,7 @@
 
 .product-card .button-container {
   display: flex;
-  justify-content: space-between; /* Ensures buttons are aligned in a row */
+  justify-content: space-between;
   gap: 10px;
   width: 100%;
   margin: 1rem 0;
@@ -69,19 +69,19 @@
 
 .product-card button {
 font-family: 'Jersey 15', sans-serif;
-  background-color: black; /* Matching button color from btn-about */
+  background-color: black;
   color: #FF073A;
   border-color: #FF073A;
-  border-radius: 4px; /* Matching border-radius from btn-about */
+  border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1; /* Keep the size from the previous button layout */
+  flex: 1;
 }
 
 .product-card button:hover {
-  background-color: #FF073A; /* Matching hover color from btn-about */
+  background-color: #FF073A;
   color: black;
   font-family: 'Jersey 15', sans-serif;
   color: white;

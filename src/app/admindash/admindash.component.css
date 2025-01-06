@@ -1,0 +1,123 @@
+/* Osnovni stilovi za cijeli dokument */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+.form-container {
+  width: 45%;
+  margin-right: 20px;
+}
+
+.table-container {
+  width: 50%;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Tabela korisnika */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+button.btn-edit,
+button.btn-delete {
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+button.btn-edit {
+  background-color: #28a745;
+  color: white;
+}
+
+button.btn-edit:hover {
+  background-color: #218838;
+}
+
+button.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.btn-delete:hover {
+  background-color: #c82333;
+}

@@ -1,11 +1,11 @@
 .home-container {
   text-align: center;
-  padding: auto;/* Remove padding to allow the video to fill the container */
+  padding: auto;
   background-color: #0e1720;
   color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-  height: 100vh; /* Ensure the container takes up the full viewport height */
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -22,10 +22,10 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the video */
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the video covers the entire container */
+  object-fit: cover;
 }
 
 .overlay-button {
@@ -115,7 +115,7 @@ main {
 
 @media (max-width: 768px) {
   .home-container {
-    padding: 0; /* Remove padding for small screens */
+    padding: 0;
     height: 100vh;
   }
 

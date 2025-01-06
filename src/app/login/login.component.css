@@ -16,7 +16,7 @@
   background: #d71932;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2); /* Added shadow beneath */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2);
   height: 450px;
   width: 400px;
   text-align: center;
@@ -68,34 +68,34 @@ input:focus {
 .login-button {
   margin-top: 20px;
   width: 100%;
-  padding: 12px 20px; /* Slightly increased padding for a better look */
+  padding: 12px 20px;
   background-color: black;
   border: none;
   color: white;
   font-size: 25px;
   font-weight: bold;
   font-family: 'Jersey 15', sans-serif;
-  border-radius: 8px; /* Rounded corners for a softer look */
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s; /* Smooth transition effects */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+  transition: background-color 0.3s, transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-button:hover {
   background-color: black;
-  transform: translateY(-3px); /* Lift the button slightly on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow when hovered */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .login-button:active {
   background-color: black;
-  transform: translateY(1px); /* Slightly push the button down to give a pressed effect */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow when active */
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .login-button:disabled {
-  background-color: #cccccc; /* Light gray background when disabled */
-  cursor: not-allowed; /* Disable pointer events */
-  box-shadow: none; /* Remove shadow when disabled */
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 .register-btn {
   background-color: #0078ff;
@@ -115,7 +115,7 @@ input:focus {
   transform: scale(1.1);
 }
 
-/* Error Message Styling */
+
 .error {
   color: red;
   font-size: 14px;
