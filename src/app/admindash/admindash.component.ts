@@ -39,7 +39,7 @@ export class AdmindashComponent implements OnInit {
       if (!res.ok) throw new Error('Greška pri dohvaćanju korisnika.');
       const data = await res.json();
       this.users = data.map((user: any) => ({
-        id: user.ID,
+        id: user.id,
         first_name: user.first_name,
         last_name: user.last_name,
         username: user.username,
@@ -73,7 +73,7 @@ export class AdmindashComponent implements OnInit {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ID: this.user.id,
+          id: this.user.id,
           first_name: this.user.first_name,
           last_name: this.user.last_name,
           username: this.user.username,

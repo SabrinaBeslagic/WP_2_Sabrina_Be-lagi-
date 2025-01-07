@@ -11,26 +11,24 @@ body {
 }
 
 .footer {
-  background-color: black;
+margin-top: 20px;
+  background-color: #FF073A;
   color: white;
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
   width: 100%;
+
 }
 
 .footer-text {
   margin: 0;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
   text-decoration: none;
+  font-family: 'Jersey 15', sans-serif;
 }
 
-.footer-text a:hover,
-.footer-text a:focus {
-  transform: scale(1.1);
-  text-decoration: underline;
-}
 .social-links p {
   font-size: 1rem;
 }

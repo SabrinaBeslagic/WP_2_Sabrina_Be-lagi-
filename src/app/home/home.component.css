@@ -1,7 +1,7 @@
 .home-container {
   text-align: center;
   padding: auto;
-  background-color: #0e1720;
+  background-color: black;
   color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
@@ -18,99 +18,83 @@ main {
   border-radius: 10px;
 }
 
-.backgroundvideo {
+.video-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  transform: translate(-50%, -50%) rotate(-45deg); /* Diagonal rotation */
+  color: red;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional text shadow for better visibility */
 }
-
-.overlay-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0bcbd4;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Jersey 15', sans-serif;
 }
-
-.overlay-button:hover {
-  background-color: rgba(0, 0, 0);
+.video {
+  width: 1000px;
+  height: 500px;
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.4);
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-
-.overlay-button:active {
-  transform: scale(1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.outside-box{
+height: 500px;
 }
-
-.home-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-.news-section {
+.sections-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f5f5f5;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
-.news-box {
+.section {
   flex: 1;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  min-width: 200px;
+  height: 400px;
+  background-color: black;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.news-box:hover {
+.section:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
-.news-box h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
+.section-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.news-box p {
-  font-size: 1rem;
-  color: #666;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.section-image {
+  width: 90%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -119,25 +103,32 @@ main {
     height: 100vh;
   }
 
-  h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+  .video {
+    width: 100%;
+    height: 300px; /* Adjusted height for smaller screens */
   }
 
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+  .sections-container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    gap: 7px;
   }
 
-  .overlay-button {
-    font-size: 1rem;
-    padding: 12px 25px;
+  .section {
+    min-width: 100%;
+  }
+
+  .section-overlay {
+    font-size: 20px; /* Smaller font size for smaller screens */
   }
 }
 
 @media (max-width: 420px) {
-  .overlay-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+  .video {
+    height: 200px; /* Further reduced height for very small screens */
+  }
+
+  .section-overlay {
+    font-size: 18px; /* Further reduced font size */
   }
 }
+
