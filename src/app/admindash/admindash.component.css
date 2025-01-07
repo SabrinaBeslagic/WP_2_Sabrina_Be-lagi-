@@ -1,4 +1,4 @@
-/* Osnovni stilovi za cijeli dokument */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
@@ -74,7 +74,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Tabela korisnika */
+
 table {
   width: 100%;
   border-collapse: collapse;

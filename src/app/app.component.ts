@@ -8,14 +8,20 @@ import { KarticaComponent } from './kartica/kartica.component';
 import { HeaderComponent } from './header/header.component';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CalendarComponent } from './calendar/calendar.component';
+import { DateTime } from 'luxon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterModule,NavBarComponent, FooterComponent, HomeComponent, AboutComponent,KarticaComponent, HeaderComponent, AdmindashComponent],
+  imports: [RouterOutlet,RouterModule,NavBarComponent, FooterComponent, HomeComponent, AboutComponent,KarticaComponent, HeaderComponent, AdmindashComponent, CalendarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-projekat';
+ meetings = {
+     '2025-01-13': ['Assassins Creed Shadows', 'Developed by Ubisoft Quebec and published by Ubisoft.'],
+     '2025-01-25': ['GTA 6', 'Developed by Rockstar Games'],
+     '2025-03-02': ['FIFA 2025', 'Developed by EA Sports'],
+   };
 }

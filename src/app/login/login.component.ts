@@ -17,7 +17,7 @@ export class LoginComponent {
   protected username: string = '';
   protected password: string = '';
   protected errors: string[] = [];
-  protected errorMessage: string = ''; // For API error messages
+  protected errorMessage: string = '';
 
   public constructor(private router: Router) {}
 
@@ -55,28 +55,28 @@ export class LoginComponent {
       const data = await response.json();
 
       if (data.success) {
-        // Check user role and redirect accordingly
+
         if (data.role === 'admin') {
           alert("Welcome, Admin!");
-          this.router.navigate(['/admindash']); // Redirect to admin dashboard
+          this.router.navigate(['/admindash']);
         } else if (data.role === 'user') {
           alert("Login successful!");
-          this.router.navigate(['/home']); // Redirect to user home
+          this.router.navigate(['/home']);
         } else {
           this.errorMessage = "Unknown user role.";
         }
 
-        // Optionally, store user data in session storage
+
         sessionStorage.setItem('userID', data.userID || '');
         sessionStorage.setItem('username', this.username);
         sessionStorage.setItem('role', data.role);
 
       } else {
-        // Handle invalid login
+
         this.errorMessage = data.message || "Invalid username or password.";
       }
     } catch (error: any) {
-      // Handle server or network errors
+
       this.errorMessage = "An error occurred. Please try again.";
       console.error("Login error:", error.message);
     }

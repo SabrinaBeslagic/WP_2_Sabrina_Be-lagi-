@@ -19,20 +19,20 @@ export class AdmindashComponent implements OnInit {
     username: '',
     email: '',
     password: '',
-    role: 'user', // Default role
-  }; // Trenutno uređivani korisnik
+    role: 'user',
+  };
   protected errors: string[] = [];
-  protected isEditMode: boolean = false; // Flag za uređivanje
+  protected isEditMode: boolean = false;
 
-  private apiUrl = 'http://localhost/my-backend/admindash.php'; // Vaš API endpoint
+  private apiUrl = 'http://localhost/my-backend/admindash.php';
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.getUsers(); // Dohvati sve korisnike prilikom inicijalizacije
+    this.getUsers();
   }
 
-  // Dohvati sve korisnike
+
   protected async getUsers(): Promise<void> {
     try {
       const res = await fetch(this.apiUrl);
@@ -53,11 +53,11 @@ export class AdmindashComponent implements OnInit {
     }
   }
 
-  // Dodaj ili ažuriraj korisnika
+
   protected async onSubmit(): Promise<void> {
     this.errors = [];
 
-    // Validacija
+
     if (!this.user.first_name.trim()) this.errors.push('Ime je obavezno.');
     if (!this.user.last_name.trim()) this.errors.push('Prezime je obavezno.');
     if (!this.user.username.trim()) this.errors.push('Korisničko ime je obavezno.');
@@ -91,7 +91,7 @@ export class AdmindashComponent implements OnInit {
         return;
       }
 
-      this.getUsers(); // Osvježi listu korisnika
+      this.getUsers();
       this.resetForm();
       alert(this.isEditMode ? 'Korisnik ažuriran.' : 'Korisnik dodan.');
     } catch (e: any) {
@@ -100,13 +100,13 @@ export class AdmindashComponent implements OnInit {
     }
   }
 
-  // Postavi korisnika za uređivanje
+
   protected editUser(user: any): void {
     this.user = { ...user };
     this.isEditMode = true;
   }
 
-  // Obriši korisnika
+
   protected async deleteUser(id: number): Promise<void> {
     try {
       const res = await fetch(this.apiUrl, {
@@ -125,7 +125,7 @@ export class AdmindashComponent implements OnInit {
         return;
       }
 
-      this.getUsers(); // Osvježi listu korisnika
+      this.getUsers();
       alert('Korisnik obrisan.');
     } catch (e: any) {
       this.errors.push(e.message || 'Greška pri brisanju korisnika.');
@@ -133,7 +133,7 @@ export class AdmindashComponent implements OnInit {
     }
   }
 
-  // Resetuj formu
+
   protected resetForm(): void {
     this.user = {
       id: null,
