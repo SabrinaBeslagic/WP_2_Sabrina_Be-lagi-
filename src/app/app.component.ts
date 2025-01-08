@@ -9,12 +9,13 @@ import { HeaderComponent } from './header/header.component';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CartComponent } from './cart/cart.component';
 import { DateTime } from 'luxon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterModule,NavBarComponent, FooterComponent, HomeComponent, AboutComponent,KarticaComponent, HeaderComponent, AdmindashComponent, CalendarComponent],
+  imports: [RouterOutlet,RouterModule,NavBarComponent, FooterComponent, HomeComponent, AboutComponent,KarticaComponent, HeaderComponent, AdmindashComponent, CalendarComponent, CartComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

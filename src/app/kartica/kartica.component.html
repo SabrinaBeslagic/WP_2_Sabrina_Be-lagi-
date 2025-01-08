@@ -1,14 +1,41 @@
 <div class="product-card-container">
   <div *ngFor="let product of products" class="product-card">
-    <img [src]="product.img_url" alt="{{ product.name }}" />
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.description }}</p>
-    <div class="rating">
-      <span *ngFor="let star of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" class="star" [class.filled]="star <= product.rating">★</span>
+    <!-- Product Image -->
+    <img
+      [src]="product.img_url"
+      [alt]="product.name"
+      class="product-image"
+    />
+
+    <!-- Product Details -->
+    <div class="product-info">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-description">{{ product.description }}</p>
+
+      <!-- Product Rating -->
+      <div class="rating">
+        <span
+          *ngFor="let star of [1, 2, 3, 4, 5]"
+          class="star"
+          [class.filled]="star <= product.rating"
+        >
+          ★
+        </span>
+      </div>
+
+      <!-- Product Price -->
+      <p class="product-price">${{ product.price | number: '1.2-2' }}</p> <!-- Displays price -->
     </div>
+
+    <!-- Action Buttons -->
     <div class="button-container">
-      <button class="card-button">Inspect</button>
-      <button class="card-button">Add to Cart</button>
+
+      <button
+        class="card-button"
+        (click)="addToCart(product)"
+      >
+        Add to Cart
+      </button>
     </div>
   </div>
 </div>

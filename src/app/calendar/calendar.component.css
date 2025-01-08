@@ -1,15 +1,20 @@
+/* Container Styling */
 .calendar-container {
   display: block;
 }
 
+/* Calendar Styling */
 .calendar {
   padding-right: 10px;
   width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white; /* Set background to white */
+  border: 3px solid red; /* Make the border bold and red */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
+/* Calendar Headline Styling */
 .calendar-headline {
   display: flex;
   margin-bottom: 10px;
@@ -32,13 +37,13 @@
 
 .calendar-headline-control:hover {
   text-decoration: underline;
-
 }
 
 .calendar-headline-control-today {
   margin: 0 10px;
 }
 
+/* Weeks Grid Styling */
 .calendar-weeks-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -49,13 +54,13 @@
 
 .calendar-weeks-grid-cell {
   text-align: center;
-
 }
 
 .calendar-grid-cell-inactive {
   color: grey;
 }
 
+/* Calendar Grid Styling */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -82,6 +87,7 @@
   background: #9ba3bf;
 }
 
+/* Schedule Styling */
 .schedule {
   margin-left: 10px;
   color: red;
@@ -101,4 +107,3 @@
   color: red;
   text-align: center;
 }
-
