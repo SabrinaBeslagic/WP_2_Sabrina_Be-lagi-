@@ -1,6 +1,5 @@
 <body>
 <div class="container">
-  <!-- Forma za dodavanje i ažuriranje korisnika -->
   <div class="form-container">
 
     <div *ngIf="errors.length > 0" class="error-messages">
@@ -10,7 +9,7 @@
     </div>
 
     <form (ngSubmit)="onSubmit()">
-      <h2>{{ isEditMode ? 'Uredi korisnika' : 'Dodaj korisnika' }}</h2>
+      <h2>{{ isEditMode ? 'Update user' : 'Add User' }}</h2>
 
       <div class="form-group" *ngIf="isEditMode">
         <label for="id">ID:</label>
@@ -18,17 +17,17 @@
       </div>
 
       <div class="form-group">
-        <label for="first_name">Ime:</label>
+        <label for="first_name">First Name:</label>
         <input type="text" id="first_name" [(ngModel)]="user.first_name" name="first_name" required />
       </div>
 
       <div class="form-group">
-        <label for="last_name">Prezime:</label>
+        <label for="last_name">Last Name:</label>
         <input type="text" id="last_name" [(ngModel)]="user.last_name" name="last_name" required />
       </div>
 
       <div class="form-group">
-        <label for="username">Korisničko ime:</label>
+        <label for="username">Username:</label>
         <input type="text" id="username" [(ngModel)]="user.username" name="username" required />
       </div>
 
@@ -38,30 +37,30 @@
       </div>
 
       <div class="form-group" *ngIf="!isEditMode">
-        <label for="password">Šifra:</label>
+        <label for="password">Password:</label>
         <input type="password" id="password" [(ngModel)]="user.password" name="password" required />
       </div>
 
       <div class="form-group">
-        <label for="role">Uloga:</label>
+        <label for="role">Role:</label>
         <select id="role" [(ngModel)]="user.role" name="role" required>
-          <option value="user">Korisnik</option>
-          <option value="admin">Administrator</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
         </select>
       </div>
 
       <button type="submit" class="btn">
-        {{ isEditMode ? 'Ažuriraj' : 'Dodaj' }}
+        {{ isEditMode ? 'Update' : 'Add' }}
       </button>
       <button type="button" class="btn btn-secondary" (click)="resetForm()" *ngIf="isEditMode">
-        Otkaži
+        Cancle
       </button>
     </form>
   </div>
 
 
   <div class="table-container">
-    <h2>Lista korisnika</h2>
+    <h2>User list</h2>
     <table>
       <thead>
       <tr>
@@ -83,8 +82,8 @@
         <td>{{ user.email }}</td>
         <td>{{ user.role }}</td>
         <td>
-          <button class="btn btn-edit" (click)="editUser(user)">Uredi</button>
-          <button class="btn btn-delete" (click)="deleteUser(user.id)">Obriši</button>
+          <button class="btn btn-edit" (click)="editUser(user)">Update</button>
+          <button class="btn btn-delete" (click)="deleteUser(user.id)">Delete</button>
         </td>
       </tr>
       </tbody>
